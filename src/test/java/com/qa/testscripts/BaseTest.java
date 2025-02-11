@@ -29,21 +29,20 @@ public class BaseTest {
     @BeforeMethod(alwaysRun = true)
     public void setup() throws IOException {
         Properties driverConfig = new Properties();
-        FileInputStream driverConfigFile = new FileInputStream(System.getProperty("user.dir")+"/src/test/java/com/qa/testdata/DriverConfig.properties");
+        FileInputStream driverConfigFile = new FileInputStream(System.getProperty("user.dir") + "/src/test/java/com/qa/testdata/DriverConfig.properties");
         driverConfig.load(driverConfigFile);
-//        String driverBinary = driverConfig.getProperty("driverBinary");
         String browser = driverConfig.getProperty("browser");
         String url = driverConfig.getProperty("url");
 
         if (browser.contentEquals("chrome")) {
-            System.setProperty("webdriver.chrome.driver",
-                    "D:\\TEST\\driverbinaries\\chromedriver\\chromedriver.exe");
+            WebDriverManager.chromedriver().setup();
             bot = new ChromeDriver();
-        } else if (browser.contentEquals("edge")) {
-            System.setProperty("webdriver.edge.driver",
-                    "D:\\TEST\\driverbinaries\\edgedriver\\msedgedriver.exe");
+        }
+        if (browser.contentEquals("edge")) {
+            WebDriverManager.edgedriver().setup();
             bot = new EdgeDriver();
-        } else {
+        }
+        if (browser.contentEquals("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             bot = new FirefoxDriver();
         }

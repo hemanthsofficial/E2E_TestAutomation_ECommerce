@@ -13,7 +13,7 @@ public class CustomerSubmitOrderTest extends BaseTest {
 
     public String extractor(String key) throws IOException {
         Properties userConfig = new Properties();
-        FileInputStream userConfigFile = new FileInputStream(System.getProperty("user.dir")+"/src/test/java/com/qa/testdata/UserConfig.properties");
+        FileInputStream userConfigFile = new FileInputStream("src/test/java/com/qa/testdata/UserConfig.properties");
         userConfig.load(userConfigFile);
         return userConfig.getProperty(key);
     }
@@ -39,7 +39,7 @@ public class CustomerSubmitOrderTest extends BaseTest {
 
     @DataProvider
     public Object[][] getProductDetails() throws IOException {
-        return new Object[][] {{getJsonDataToMap(extractor("jsonFilePath")).get(0)}};
+        return new Object[][] {{getJsonDataToMap(extractor("jsonFilePath")).getFirst()}};
     }
 
     @DataProvider
