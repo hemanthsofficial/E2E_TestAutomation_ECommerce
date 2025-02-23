@@ -16,7 +16,8 @@
         <webdrivermanager.version>5.7.0</webdrivermanager.version>
         <testng.version>7.10.2</testng.version>
         <cucumber.version>7.15.0</cucumber.version>
-        <log4j.version>2.24.3</log4j.version>
+        <slf4j.version>2.0.16</slf4j.version>
+        <log4j.version>2.17.1</log4j.version>
         <extentreports.version>5.1.2</extentreports.version>
         <allurereports.version>2.17.3</allurereports.version>
         <browsermobproxy.version>2.1.1</browsermobproxy.version>
@@ -77,13 +78,13 @@
             <version>${cucumber.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>${log4j.version}</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
+            <artifactId>log4j-slf4j-impl</artifactId>
             <version>${log4j.version}</version>
         </dependency>
         <dependency>

@@ -1,0 +1,12 @@
+com\qa\pages\CustomerLoginPages.class
+com\qa\utilities\JSONDataReader.class
+com\qa\listeners\TestListener.class
+com\qa\pages\CustomerPlaceOrderPages.class
+com\qa\utilities\JSONDataReader$1.class
+com\qa\listeners\Retry.class
+com\qa\pages\CustomerAddToCartPages.class
+com\qa\utilities\ExtentReportManager.class
+com\qa\utilities\AbstractComponents.class
+com\qa\listeners\AnnotationTransformer.class
+com\qa\pages\CustomerRegisterPages.class
+com\qa\pages\CustomerCartViewPages.class
