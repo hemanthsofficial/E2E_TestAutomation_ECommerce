@@ -131,9 +131,15 @@
 
     <profiles>
         <profile>
-            <id>basic</id>
+            <id>smoke</id>
             <properties>
-                <testNGSuite>testng.xml</testNGSuite>
+                <testNGSuite>smoke.xml</testNGSuite>
+            </properties>
+        </profile>
+        <profile>
+            <id>regression</id>
+            <properties>
+                <testNGSuite>regression.xml</testNGSuite>
             </properties>
         </profile>
     </profiles>
