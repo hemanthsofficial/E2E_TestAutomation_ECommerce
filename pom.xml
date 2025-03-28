@@ -19,7 +19,6 @@
         <slf4j.version>2.0.16</slf4j.version>
         <log4j.version>2.17.1</log4j.version>
         <extentreports.version>5.1.2</extentreports.version>
-        <allurereports.version>2.17.3</allurereports.version>
         <browsermobproxy.version>2.1.1</browsermobproxy.version>
         <guava.version>33.3.1-jre</guava.version>
         <jackson.version>2.15.0</jackson.version>
@@ -91,11 +90,6 @@
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>${extentreports.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-testng</artifactId>
-            <version>${allurereports.version}</version>
         </dependency>
         <dependency>
             <groupId>net.lightbody.bmp</groupId>
